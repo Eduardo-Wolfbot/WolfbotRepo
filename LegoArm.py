@@ -93,3 +93,6 @@ robot_release(LEFT)
 # Move a wheel stack from the middle to the right.
 robot_pick(MIDDLE)
 robot_release(RIGHT)
+# Move a wheel stack from the right to the middle.
+robot_pick(MIDDLE)
+robot_release(LEFT)
