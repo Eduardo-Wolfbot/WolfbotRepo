@@ -49,22 +49,30 @@ def robot_pick(position):
     # Rotate to the pick-up position.
 
 base_motor.run_target(60, position, Stop.HOLD)
+
 # Lower the arm.
 elbow_motor.run_target(60, -40)
+
 # Close the gripper to grab the wheel stack. gripper_motor.run_until_stalled(200, Stop.HOLD, 50) # Raise the arm to lift the wheel stack. elbow_motor.run_target(60, 0, Stop.HOLD)
 def robot_release(position):
-# This function makes the robot base rotate to the indicated # position. There it lowers the elbow, opens the gripper to # release the object. Then it raises its arm again.
+
+    # This function makes the robot base rotate to the indicated # position. There it lowers the elbow, opens the gripper to # release the object. Then it raises its arm again.
     # Rotate to the drop-off position.
 base_motor.run_target(60, position, Stop.HOLD)
+
 # Lower the arm to put the wheel stack on the ground. elbow_motor.run_target(60, -40)
 # Open the gripper to release the wheel stack. gripper_motor.run_target(200, -90)
 # Raise the arm.
 elbow_motor.run_target(60, 0, Stop.HOLD)
+
 # Play three beeps to indicate that the initialization is complete.
 brick.sound.beeps(3)
+
 # Define the three destinations for picking up and moving the wheel stacks.
 LEFT = 160
+
 MIDDLE = 100
+
 RIGHT = 40
 # This is the main part of the program. It is a loop that repeats endlessly.
 #
